@@ -12,40 +12,40 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-<!-- users tabel -->
+##usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
 |username|string|null: false|
-<!-- assosiation -->
+###assosiation
 - has_many :messages
 - has_many :groups, through: :group_users
 
-<!-- groups table -->
+##groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|text|null: false|
-<!-- assosiation -->
+###assosiation
 - has_many :users, through: :group_users
 
-<!--  groups_users table -->
+##groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-<!-- assosiation -->
+###assosiation
 - belongs_to :group
 - belongs_to :user
 
-<!-- message table -->
+##messageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
 |image|string|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
-<!-- assosiation -->
+###assosiation
 - belongs_to :group
 - belongs_to :user
 
