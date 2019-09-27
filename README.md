@@ -1,4 +1,3 @@
-# README
 # DB設計
 
 ## usersテーブル
@@ -23,7 +22,7 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-###assosiation
+### assosiation
 - belongs_to :group
 - belongs_to :user
 
