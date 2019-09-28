@@ -14,7 +14,7 @@
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 ### assosiation
 - has_many :users, through: :group_users
 - has_many :groups_users
@@ -32,8 +32,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|null: true|
+|body|text|
+|image|string|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### assosiation
