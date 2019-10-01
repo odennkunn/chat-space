@@ -1,0 +1,45 @@
+.header
+  .header__text
+    グループを作成しました
+
+.sidebar
+  .sidebar__name
+    = fa_icon 'cog', class: "sidebar__name--icon1"
+    = fa_icon 'edit', class: "sidebar__name--icon2"
+    test-user
+  .sidebar__group
+    test-group
+  .sidebar__subgroup
+    さようなら
+
+.contents
+  .contents__top
+    .contents__top__group
+      test-group
+    .contents__top__edit
+      Edit
+    .contents__top__menber
+      Member
+  .contents__main
+    .contents__main__texts
+      .contents__main__texts-1
+        test-user
+      .contents__main__texts-2
+        2019/**/**/**
+    .contents__main__texts2
+      .contents__main__texts2-1
+        こんにちは！
+      .contents__main__texts2-2
+        text(2019/**/**)
+      .contents__main__texts2-3
+        さようなら
+  .contents__form
+    %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1781/messages", :enctype => "multipart/form-data", :method => "post"}
+      %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+      %input{:name => "authenticity_token", :type => "hidden", :value => "P7/0+wFzH0pDuMtabQIUm8huSW/JL5CjoPPd+l9LUBrqa+c/QfF9bB1/IvOqEBfvcjfs4o4kl+PrRz7nU24SKg=="}/
+      .input-box
+        %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        %label.input-box__image{:for => "message_image"}
+          %i.fa.fa-image
+          %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
