@@ -2,14 +2,20 @@
   .header__text
     グループを作成しました
 
-.sidebar
-  .sidebar__name
-    = fa_icon 'cog', class: "sidebar__name--icon1"
-    = fa_icon 'edit', class: "sidebar__name--icon2"
-    test-user
-  .sidebar__group
+.side-bar
+  .head
+    %h3.head__name
+      = current_user.name
+    %ul.head__lists
+      %li.list
+        = link_to do
+          =fa_icon 'edit', class: 'icon'
+      %li.list
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
+  .side-bar__group
     test-group
-  .sidebar__subgroup
+  .side-bar__text
     さようなら
 
 .contents
