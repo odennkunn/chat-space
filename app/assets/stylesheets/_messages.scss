@@ -1,18 +1,7 @@
-.header {
-  height: 30px;
-  width: 100%;
-  background-color: $blue;
-  &__text {
-  color: $white;
-  text-align: center;
-  line-height: 30px;
-  }
-}
-
 .side-bar {
   background-color: #2f3e51;
   width: 300px;
-  height: calc(100vh - 30px);
+  height: 100vh;
   float: left;
   .head {
     height: 100px;
@@ -34,25 +23,30 @@
       }
     }
   }
-  &__group {
-    font-size: 15px;
-    font-style: bold;
-    color: $white;
-    padding-left: 20px;
-    padding-top: 20px;
-  }
-  &__text {
-    font-size: 11px;
-    font-style: bold;
-    padding: 5px 20px 40px;
-    color: $white;
+  .groups {
+    .group {
+      &__name {
+        color: $white;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-left: 20px;
+        font-style: bold;
+      }
+      &__message {
+        color: $white;
+        font-size: 11px;
+        padding-left: 20px;
+        padding-top: 5px;
+        font-style: bold;
+      }
+    }
   }
 }
 
 .contents {
   padding-left: 300px;
   width: calc(100vw - 300px);
-  height: calc(100vh - 30px);
+  height: 100vh;
   &__top{
     width: 100%;
     height: 100px;
@@ -92,7 +86,7 @@
 
   &__main {
     background-color: $white;
-    height: 560px;
+    height: 590px;
     width: 100%;
     &__texts {
       height: 65px;
