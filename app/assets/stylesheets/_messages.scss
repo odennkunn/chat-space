@@ -89,38 +89,21 @@
     height: 590px;
     width: 100%;
     &__texts {
-      height: 65px;
+      display: flex;
       &-1 {
         padding-top: 46px;
         padding-left: 40px;
-        float: left;
       }
       &-2 {
         padding-top: 50px;
         padding-left: 10px;
-        float: left;
         font-size: 12px;
         color: $right-gray;
       }
     }
-    &__texts2 {
-      &-1{
-        padding-top: 10px;
-        padding-left: 40px;
-      }
-      &-2 {
-        padding-top: 40px;
-        padding-left: 40px;
-        font-size: 16px;
-        font-style: bold;
-        color: $gray;
-      }
-      &-3 {
-        padding-top:  20px;
-        padding-left: 40px;
-        color: $gray;
-        font-size: 14px;
-      }
+    .lower-message {
+      padding-top: 10px;
+      padding-left: 40px;
     }
   }
   .form {
