@@ -123,31 +123,32 @@
       }
     }
   }
-
-  &__form {
-    background-color: #D3D3D3;
+  .form {
     height: 100px;
+    background-color: #D3D3D3;
     bottom: 0;
     position: relative;
-    .input-box {
-      padding-top: 25px;
-      padding-left: 40px;
-      position: relative;
-      &__text {
-        height: 50px;
-        width: 900px;
-      }
+    .form__message {
+      height: 50px;
+      width: 930px;
+      margin-top: 25px;
+      margin-left: 40px;
+    }
+    .form__mask {
       &__image {
         position: absolute;
         top: 40px;
-        right: 210px;
+        right: 190px;
         z-index: 1;
-        &__file {
+        .icon {
+          font-size: 20px;
+        }
+        .hidden {
           display: none;
         }
       }
     }
-    .submit-btn {
+    &__submit {
       background-color: $blue;
       color: $white;
       height: 50px;
