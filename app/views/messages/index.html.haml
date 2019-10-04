@@ -27,18 +27,7 @@
     .contents__top__menber
       Member
   .contents__main
-    .contents__main__texts
-      .contents__main__texts-1
-        test-user
-      .contents__main__texts-2
-        2019/**/**/**
-    .contents__main__texts2
-      .contents__main__texts2-1
-        こんにちは！
-      .contents__main__texts2-2
-        text(2019/**/**)
-      .contents__main__texts2-3
-        さようなら
+    = render @messages
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
