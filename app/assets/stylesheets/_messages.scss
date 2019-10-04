@@ -62,7 +62,6 @@
       left: 40px;
     }
     &__edit {
-    float: right;
     font-size: 20px;
     border: solid;
     border-width: 1px;
@@ -77,10 +76,14 @@
     }
     &__menber {
       font-size: 12px;
+      display: flex;
       color: $right-gray;
       position: absolute;
       top: 70px;
-      left: 40px;
+      left: 30px;
+      .user__name {
+        padding-left: 10px;
+      }
     }
   }
 

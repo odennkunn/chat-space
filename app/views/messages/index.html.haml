@@ -16,16 +16,18 @@
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
 
 .contents
   .contents__top
     .contents__top__group
-      test-group
+      = @group.name
     .contents__top__edit
       Edit
     .contents__top__menber
-      Member
+      - @group.users.each do |user|
+        .user__name
+          = user.name
   .contents__main
     = render @messages
   .form
