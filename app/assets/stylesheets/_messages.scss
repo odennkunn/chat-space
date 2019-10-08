@@ -91,6 +91,7 @@
     background-color: $white;
     height: 590px;
     width: 100%;
+    overflow: scroll;
     &__texts {
       display: flex;
       &-1 {
