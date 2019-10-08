@@ -1,6 +1,7 @@
 $(function(){
 
   function buildMessage(message) {
+    var img = message.image ? `<img src= ${ message.image }>` : "";
     var html = `<div class="contents__main__texts">
                   <div class="contents__main__texts-1">
                     ${message.name}
@@ -13,7 +14,7 @@ $(function(){
                   <p class="lower-message__content">
                     ${message.content}
                   </p>
-                  <img class = "lower-message__image" src = ${message.image}>
+                    ${img}
                 </div>`
     return html;
   }
@@ -33,8 +34,8 @@ $(function(){
     .done(function(message){
       var html = buildMessage(message);
       $('.contents__main').append(html);
-      $('#message_content').val('');
       $('.contents__main').animate({ scrollTop: $('.contents__main')[0].scrollHeight});
+      $('#new_message')[0].reset();
     })
     .fail(function(){
       alert('エラー');
