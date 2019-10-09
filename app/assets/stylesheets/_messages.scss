@@ -73,6 +73,10 @@
     height: 40px;
     text-align: center;
     line-height: 40px;
+    .editbtn {
+      text-decoration: none;
+      color: $blue;
+    }
     }
     &__menber {
       font-size: 12px;

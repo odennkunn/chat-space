@@ -23,7 +23,7 @@
     .contents__top__group
       = @group.name
     .contents__top__edit
-      Edit
+      = link_to "Edit", edit_group_path(@group.id), class: "editbtn" 
     .contents__top__menber
       - @group.users.each do |user|
         .user__name
