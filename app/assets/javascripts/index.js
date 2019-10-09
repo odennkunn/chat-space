@@ -56,8 +56,6 @@ var index_list2 = $("#chat-group-users");
   $(document).on("click", ".chat-group-user__btn--add", function() {
     var name = $(this).data("user-name");
     var id = $(this).data("user-id");
-    console.log(name);
-    console.log(id);
     appendMember(name, id);
     $(".user-search-add").parent().remove();
   });
