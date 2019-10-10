@@ -29,7 +29,6 @@ var index_list2 = $("#chat-group-users");
 
     .done(function(users) {
       $("#user-search-result").empty();
-      console.log($("#user-search-result"));
       if (users.length !== 0) {
         users.forEach(function(user){
           appendUser(user);
