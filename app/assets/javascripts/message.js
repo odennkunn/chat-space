@@ -63,7 +63,6 @@ $(function(){
         insertHTML = buildMessageHTML(message);
         $('.contents__main').append(insertHTML);
         $('.contents__main').animate({scrollTop: $('.contents__main')[0].scrollHeight}, 'fast');
-        console.log(message);
       });
     })
     .fail(function () {
